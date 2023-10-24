@@ -50,8 +50,46 @@ console.log('array of employee data: ',  employees );
 //
 function calculateIndividualEmployeeBonus( employee ) {  
   // your logic here
-  
+  // create increase bonus array
+let bonusPercentage = 0;
+let employeeBonus = {};
+console.log("Here is the current bonus percent", bonusPercentage, "and this is their bonus record", employeeBonus);
+
+for (let index of employees){
+  if (employee === index.name){
+    employeeBonus.name = index.name
+      if (index.reviewRating === 3){
+        bonusPercentage += 4;
+    }
+      else if (index.reviewRating === 4){
+        bonusPercentage += 6;
+      }
+      
+      else if (index.reviewRating === 5){
+        bonusPercentage += 10;
+      }
+      console.log(bonusPercentage);
+  }
+}
+
+
+
+  // create new object called employeeBonus with the first paramater being name
+  // Be able to look up employee
+  // look at their reviewRating
+  // find the associated object in the increaseBonusArray
+  // return the associated percent from the increaseBonusArray
+  // add the percent we find to a the bonusPercentage paramter in the employeeBonus object
+  // check amount of digits in employee number, then add 5 percent to the bonusPercentage paramter
+  // if statement to check if income is over 65000 decrease bonusPercentage by 1
+  // if bonusPercentage is above 13, change bonusPercentage to 13
+  // if bonusPercentage is below 0, change bonusPercentage to 0
+  // look back to annualSalary and multiply by bonusPercentage push that to the new totalBonus paramter
+  // add totalBonus and annualSalaray and push to totalCompensation paramter
+  // return as an object with new values
   
   // return new object with bonus results
 
 }
+
+calculateIndividualEmployeeBonus('Scout')
